@@ -1,0 +1,33 @@
+{
+  "name": "crash-game-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Crash Game Frontend - Turborepo Monorepo",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:web": "turbo run dev --filter=web",
+    "build": "turbo run build",
+    "build:web": "turbo run build --filter=web",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "typecheck": "turbo run typecheck",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "clean:port": "fuser -k 3000/tcp 2>/dev/null || true"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.1",
+    "turbo": "^1.11.2",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "npm@10.2.3",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

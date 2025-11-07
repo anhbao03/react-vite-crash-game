@@ -1,0 +1,7 @@
+{
+  "name": "@crash-game/typescript-config",
+  "version": "1.0.0",
+  "private": true,
+  "main": "base.json",
+  "files": ["base.json", "react.json"]
+}

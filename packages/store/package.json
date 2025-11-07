@@ -1,0 +1,24 @@
+{
+  "name": "@crash-game/store",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@crash-game/utils": "*",
+    "zustand": "^4.4.7",
+    "immer": "^10.0.3"
+  },
+  "devDependencies": {
+    "@crash-game/eslint-config": "*",
+    "@crash-game/typescript-config": "*",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
