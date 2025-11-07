@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useGameStore } from '@crash-game/store';
-import { validateBetAmount, validateAutoCashout, formatCurrency, formatMultiplier } from '@crash-game/utils';
+import { validateBetAmount, formatCurrency, formatMultiplier } from '@crash-game/utils';
 import type { GameStatus } from '@crash-game/utils';
 
 interface GameState {

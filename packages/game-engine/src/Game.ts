@@ -25,8 +25,14 @@ export class Game {
       autoResize: config.autoResize !== undefined ? config.autoResize : true,
     };
 
-    // Initialize PixiJS Application
-    this.app = new PIXI.Application();
+    // Initialize PixiJS Application (v7 constructor)
+    this.app = new PIXI.Application({
+      width: this.config.width,
+      height: this.config.height,
+      backgroundColor: this.config.backgroundColor,
+      antialias: this.config.antialias,
+      resolution: this.config.resolution,
+    });
   }
 
   /**
@@ -34,17 +40,8 @@ export class Game {
    */
   public async init(): Promise<void> {
     try {
-      // Initialize PIXI application
-      await this.app.init({
-        width: this.config.width,
-        height: this.config.height,
-        backgroundColor: this.config.backgroundColor,
-        antialias: this.config.antialias,
-        resolution: this.config.resolution,
-      });
-
       // Append canvas to container
-      this.container.appendChild(this.app.canvas);
+      this.container.appendChild(this.app.view as HTMLCanvasElement);
 
       // Create and initialize game scene
       this.gameScene = new GameScene(this.app);
@@ -57,7 +54,7 @@ export class Game {
       }
 
       // Start game loop
-      this.app.ticker.add(this.update.bind(this));
+      this.app.ticker.add((delta: number) => this.update(delta));
 
       console.log('✅ Game initialized successfully');
     } catch (error) {
@@ -69,9 +66,9 @@ export class Game {
   /**
    * Update loop
    */
-  private update(ticker: PIXI.Ticker): void {
+  private update(delta: number): void {
     if (this.gameScene) {
-      this.gameScene.update(ticker.deltaTime);
+      this.gameScene.update(delta);
     }
   }
 
@@ -166,8 +163,9 @@ export class Game {
       baseTexture: true,
     });
 
-    if (this.container.contains(this.app.canvas)) {
-      this.container.removeChild(this.app.canvas);
+    const canvas = this.app.view as HTMLCanvasElement;
+    if (this.container.contains(canvas)) {
+      this.container.removeChild(canvas);
     }
   }
 
@@ -175,7 +173,7 @@ export class Game {
    * Get canvas element
    */
   public getCanvas(): HTMLCanvasElement {
-    return this.app.canvas;
+    return this.app.view as HTMLCanvasElement;
   }
 
   /**

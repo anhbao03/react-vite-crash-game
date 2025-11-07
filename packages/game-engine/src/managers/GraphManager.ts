@@ -13,7 +13,6 @@ export class GraphManager {
   private width: number;
   private height: number;
   private maxPoints = 100;
-  private startTime = 0;
 
   constructor(width: number, height: number) {
     this.width = width;
@@ -32,10 +31,6 @@ export class GraphManager {
    * Add a new point to the graph
    */
   public addPoint(multiplier: number, elapsedTime: number): void {
-    if (this.points.length === 0) {
-      this.startTime = Date.now();
-    }
-
     const point: GraphPoint = {
       x: this.mapTimeToX(elapsedTime),
       y: this.mapMultiplierToY(multiplier),
@@ -185,7 +180,6 @@ export class GraphManager {
   public clear(): void {
     this.points = [];
     this.graphics.clear();
-    this.startTime = 0;
   }
 
   /**

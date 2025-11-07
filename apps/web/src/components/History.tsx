@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { formatMultiplier, getMultiplierColor } from '@crash-game/utils';
+import { formatMultiplier } from '@crash-game/utils';
 import type { HistoryRound } from '@crash-game/websocket-client';
 
 export function History() {

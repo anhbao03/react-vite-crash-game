@@ -29,7 +29,7 @@ export function GamePage() {
   const betting = useBetting({ client });
 
   // Store
-  const { balance, setBalance } = useGameStore();
+  const { balance } = useGameStore();
 
   // Initialize PixiJS game
   useEffect(() => {
