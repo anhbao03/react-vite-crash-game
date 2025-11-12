@@ -1,0 +1,99 @@
+{
+  "APP": {
+    "TITLE": "Trò Chơi Crash",
+    "SUBTITLE": "Trò Chơi Cá Cược Nhiều Người"
+  },
+  "CONNECTION": {
+    "CONNECTED": "Đã kết nối",
+    "DISCONNECTED": "Mất kết nối",
+    "CONNECTING": "Đang kết nối...",
+    "RECONNECTING": "Đang kết nối lại...",
+    "ERROR": "Lỗi kết nối"
+  },
+  "GAME": {
+    "STATUS": {
+      "WAITING": "Đang chờ vòng mới...",
+      "BETTING": "Đặt cược ngay!",
+      "STARTING": "Bắt đầu...",
+      "FLYING": "ĐANG BAY!",
+      "CRASHED": "ĐÃ NỔ tại {crashPoint}!"
+    },
+    "ROUND": {
+      "NUMBER": "Vòng #{number}",
+      "NEXT_ROUND": "Vòng kế tiếp bắt đầu sau {time}s",
+      "CURRENT_ROUND": "Vòng Hiện Tại"
+    },
+    "MULTIPLIER": {
+      "CURRENT": "Hiện tại: {value}",
+      "TARGET": "Mục tiêu: {value}"
+    }
+  },
+  "BET": {
+    "TITLE": "Điều Khiển Cược",
+    "AMOUNT": "Số Tiền Cược",
+    "PLACE_BET": "Đặt Cược {amount}",
+    "PLACING_BET": "Đang Đặt Cược...",
+    "CASHOUT": "Rút Tiền tại {multiplier}",
+    "CASHING_OUT": "Đang Rút Tiền...",
+    "AUTO_CASHOUT": "Tự Động Rút Tiền",
+    "ENABLE": "Bật",
+    "DISABLE": "Tắt",
+    "YOUR_BET": "Cược của bạn:",
+    "AUTO_CASHOUT_AT": "Tự động rút tại:",
+    "QUICK_BETS": "Cược Nhanh",
+    "WAIT_NEXT_ROUND": "Chờ vòng kế tiếp",
+    "ERRORS": {
+      "MIN_BET": "Cược tối thiểu là {amount}",
+      "MAX_BET": "Cược tối đa là {amount}",
+      "INSUFFICIENT_BALANCE": "Số dư không đủ",
+      "ALREADY_BET": "Đã có cược đang hoạt động",
+      "NO_ACTIVE_BET": "Không có cược nào để rút tiền",
+      "NOT_CONNECTED": "Chưa kết nối đến máy chủ",
+      "INVALID_AMOUNT": "Số tiền cược không hợp lệ"
+    }
+  },
+  "ACTIVE_BETS": {
+    "TITLE": "Cược Đang Hoạt Động",
+    "PLAYERS": "{count} người chơi",
+    "NO_BETS": "Chưa có cược nào",
+    "BET_LABEL": "Cược:",
+    "PROFIT_LABEL": "Lãi:",
+    "AT_MULTIPLIER": "@ {multiplier}",
+    "AUTO_AT": "Tự động @ {multiplier}"
+  },
+  "HISTORY": {
+    "TITLE": "Lịch Sử Vòng",
+    "LAST_ROUNDS": "{count} vòng gần nhất",
+    "ROUND_INFO": "Vòng #{number}: {crashPoint}",
+    "PLAYERS_COUNT": "{count} người chơi"
+  },
+  "BALANCE": {
+    "TITLE": "Số Dư",
+    "CURRENT": "Số Dư Hiện Tại"
+  },
+  "NOTIFICATIONS": {
+    "BET_PLACED": "Đặt cược thành công!",
+    "BET_REJECTED": "Cược bị từ chối: {reason}",
+    "CASHOUT_SUCCESS": "Rút tiền thành công!",
+    "CASHOUT_FAILED": "Rút tiền thất bại: {reason}",
+    "LAST_WIN": "Thắng Gần Đây",
+    "PROFIT": "+{amount}"
+  },
+  "PLAYER": {
+    "JOINED": "{player} đã tham gia trò chơi",
+    "LEFT": "{player} đã rời khỏi trò chơi",
+    "CASHED_OUT": "{player} đã rút tiền tại {multiplier}x (+{amount})",
+    "WON": "{player} thắng {amount}",
+    "LOST": "{player} thua {amount}"
+  },
+  "COMMON": {
+    "LOADING": "Đang tải...",
+    "ERROR": "Lỗi",
+    "SUCCESS": "Thành công",
+    "CANCEL": "Hủy",
+    "CONFIRM": "Xác nhận",
+    "CLOSE": "Đóng",
+    "YES": "Có",
+    "NO": "Không"
+  }
+}

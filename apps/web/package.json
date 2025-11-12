@@ -5,8 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 3000",
+    "dev:en": "VITE_LANG_CODE=en_US vite --host 0.0.0.0 --port 3000",
+    "dev:vi": "VITE_LANG_CODE=vi_VN vite --host 0.0.0.0 --port 3000",
     "build": "tsc && vite build",
+    "build:en": "VITE_LANG_CODE=en_US tsc && vite build",
+    "build:vi": "VITE_LANG_CODE=vi_VN tsc && vite build",
+    "build:all": "npm run build:en && npm run build:vi",
     "preview": "vite preview",
+    "preview:en": "vite preview --outDir dist/en_US",
+    "preview:vi": "vite preview --outDir dist/vi_VN",
     "lint": "eslint src/",
     "typecheck": "tsc --noEmit"
   },

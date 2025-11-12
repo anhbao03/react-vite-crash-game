@@ -1,0 +1,99 @@
+{
+  "APP": {
+    "TITLE": "Crash Game",
+    "SUBTITLE": "Multiplayer Betting Game"
+  },
+  "CONNECTION": {
+    "CONNECTED": "Connected",
+    "DISCONNECTED": "Disconnected",
+    "CONNECTING": "Connecting...",
+    "RECONNECTING": "Reconnecting...",
+    "ERROR": "Connection Error"
+  },
+  "GAME": {
+    "STATUS": {
+      "WAITING": "Waiting for round...",
+      "BETTING": "Place your bets!",
+      "STARTING": "Starting...",
+      "FLYING": "FLYING!",
+      "CRASHED": "CRASHED at {crashPoint}!"
+    },
+    "ROUND": {
+      "NUMBER": "Round #{number}",
+      "NEXT_ROUND": "Next round starts in {time}s",
+      "CURRENT_ROUND": "Current Round"
+    },
+    "MULTIPLIER": {
+      "CURRENT": "Current: {value}",
+      "TARGET": "Target: {value}"
+    }
+  },
+  "BET": {
+    "TITLE": "Bet Controls",
+    "AMOUNT": "Bet Amount",
+    "PLACE_BET": "Place Bet {amount}",
+    "PLACING_BET": "Placing Bet...",
+    "CASHOUT": "Cash Out at {multiplier}",
+    "CASHING_OUT": "Cashing Out...",
+    "AUTO_CASHOUT": "Auto Cashout",
+    "ENABLE": "Enable",
+    "DISABLE": "Disable",
+    "YOUR_BET": "Your Bet:",
+    "AUTO_CASHOUT_AT": "Auto Cashout:",
+    "QUICK_BETS": "Quick Bets",
+    "WAIT_NEXT_ROUND": "Wait for next round",
+    "ERRORS": {
+      "MIN_BET": "Minimum bet is {amount}",
+      "MAX_BET": "Maximum bet is {amount}",
+      "INSUFFICIENT_BALANCE": "Insufficient balance",
+      "ALREADY_BET": "Already have an active bet",
+      "NO_ACTIVE_BET": "No active bet to cashout",
+      "NOT_CONNECTED": "Not connected to server",
+      "INVALID_AMOUNT": "Invalid bet amount"
+    }
+  },
+  "ACTIVE_BETS": {
+    "TITLE": "Active Bets",
+    "PLAYERS": "{count} players",
+    "NO_BETS": "No active bets yet",
+    "BET_LABEL": "Bet:",
+    "PROFIT_LABEL": "Profit:",
+    "AT_MULTIPLIER": "@ {multiplier}",
+    "AUTO_AT": "Auto @ {multiplier}"
+  },
+  "HISTORY": {
+    "TITLE": "Round History",
+    "LAST_ROUNDS": "Last {count} rounds",
+    "ROUND_INFO": "Round #{number}: {crashPoint}",
+    "PLAYERS_COUNT": "{count} players"
+  },
+  "BALANCE": {
+    "TITLE": "Balance",
+    "CURRENT": "Current Balance"
+  },
+  "NOTIFICATIONS": {
+    "BET_PLACED": "Bet placed successfully!",
+    "BET_REJECTED": "Bet rejected: {reason}",
+    "CASHOUT_SUCCESS": "Cashed out successfully!",
+    "CASHOUT_FAILED": "Cashout failed: {reason}",
+    "LAST_WIN": "Last Win",
+    "PROFIT": "+{amount}"
+  },
+  "PLAYER": {
+    "JOINED": "{player} joined the game",
+    "LEFT": "{player} left the game",
+    "CASHED_OUT": "{player} cashed out at {multiplier}x (+{amount})",
+    "WON": "{player} won {amount}",
+    "LOST": "{player} lost {amount}"
+  },
+  "COMMON": {
+    "LOADING": "Loading...",
+    "ERROR": "Error",
+    "SUCCESS": "Success",
+    "CANCEL": "Cancel",
+    "CONFIRM": "Confirm",
+    "CLOSE": "Close",
+    "YES": "Yes",
+    "NO": "No"
+  }
+}

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useGameStore } from '@crash-game/store';
 import { validateBetAmount, formatCurrency, formatMultiplier } from '@crash-game/utils';
 import type { GameStatus } from '@crash-game/utils';
+import { t } from '@/localization/localizationManager';
 
 interface GameState {
   status: GameStatus;
@@ -47,7 +48,7 @@ export function BetControls({ gameState, betting, balance, disabled }: BetContro
     }
 
     if (betAmount > balance) {
-      alert('Insufficient balance');
+      alert(t('BET.ERRORS.INSUFFICIENT_BALANCE'));
       return;
     }
 
@@ -65,12 +66,12 @@ export function BetControls({ gameState, betting, balance, disabled }: BetContro
 
   return (
     <div className="card space-y-4">
-      <h2 className="text-lg font-bold text-white">Bet Controls</h2>
+      <h2 className="text-lg font-bold text-white">{t('BET.TITLE')}</h2>
 
       {/* Bet Amount */}
       <div>
         <label className="block text-sm text-dark-300 mb-2">
-          Bet Amount
+          {t('BET.AMOUNT')}
         </label>
         <input
           type="number"
@@ -101,14 +102,14 @@ export function BetControls({ gameState, betting, balance, disabled }: BetContro
       <div>
         <div className="flex items-center justify-between mb-2">
           <label className="text-sm text-dark-300">
-            Auto Cashout
+            {t('BET.AUTO_CASHOUT')}
           </label>
           <button
             onClick={() => setShowAutoCashout(!showAutoCashout)}
             className="text-xs text-primary-500 hover:text-primary-400"
             disabled={disabled || betting.hasBet}
           >
-            {showAutoCashout ? 'Disable' : 'Enable'}
+            {showAutoCashout ? t('BET.DISABLE') : t('BET.ENABLE')}
           </button>
         </div>
         
@@ -134,7 +135,9 @@ export function BetControls({ gameState, betting, balance, disabled }: BetContro
             disabled={disabled || betting.isPlacingBet}
             className="btn btn-success w-full py-3 text-lg font-bold"
           >
-            {betting.isPlacingBet ? 'Placing Bet...' : `Place Bet ${formatCurrency(betAmount)}`}
+            {betting.isPlacingBet 
+              ? t('BET.PLACING_BET') 
+              : t('BET.PLACE_BET', { amount: formatCurrency(betAmount) })}
           </button>
         )}
 
@@ -144,7 +147,9 @@ export function BetControls({ gameState, betting, balance, disabled }: BetContro
             disabled={disabled || betting.isCashingOut}
             className="btn btn-primary w-full py-3 text-lg font-bold animate-pulse"
           >
-            {betting.isCashingOut ? 'Cashing Out...' : `Cash Out at ${formatMultiplier(gameState.currentMultiplier)}`}
+            {betting.isCashingOut 
+              ? t('BET.CASHING_OUT') 
+              : t('BET.CASHOUT', { multiplier: formatMultiplier(gameState.currentMultiplier) })}
           </button>
         )}
 
@@ -153,10 +158,10 @@ export function BetControls({ gameState, betting, balance, disabled }: BetContro
             disabled
             className="btn bg-dark-700 text-dark-400 w-full py-3 text-lg font-bold cursor-not-allowed"
           >
-            {gameState.status === 'waiting' ? 'Waiting...' : 
-             gameState.status === 'starting' ? 'Starting...' : 
-             gameState.status === 'crashed' ? 'Round Ended' : 
-             'Wait for next round'}
+            {gameState.status === 'waiting' ? t('GAME.STATUS.WAITING') : 
+             gameState.status === 'starting' ? t('GAME.STATUS.STARTING') : 
+             gameState.status === 'crashed' ? t('GAME.STATUS.CRASHED', { crashPoint: '' }) : 
+             t('BET.WAIT_NEXT_ROUND')}
           </button>
         )}
       </div>
@@ -166,14 +171,14 @@ export function BetControls({ gameState, betting, balance, disabled }: BetContro
         <div className="card bg-dark-700 border-primary-500">
           <div className="text-sm space-y-2">
             <div className="flex justify-between">
-              <span className="text-dark-400">Your Bet:</span>
+              <span className="text-dark-400">{t('BET.YOUR_BET')}</span>
               <span className="text-white font-semibold">
                 {formatCurrency(betting.currentBet.amount)}
               </span>
             </div>
             {betting.currentBet.autoCashout && (
               <div className="flex justify-between">
-                <span className="text-dark-400">Auto Cashout:</span>
+                <span className="text-dark-400">{t('BET.AUTO_CASHOUT_AT')}</span>
                 <span className="text-primary-400 font-semibold">
                   {formatMultiplier(betting.currentBet.autoCashout)}
                 </span>
@@ -187,9 +192,9 @@ export function BetControls({ gameState, betting, balance, disabled }: BetContro
       {betting.lastProfit !== null && (
         <div className="card bg-success-900/20 border-success-500">
           <div className="text-center">
-            <div className="text-sm text-success-400 mb-1">Last Win</div>
+            <div className="text-sm text-success-400 mb-1">{t('NOTIFICATIONS.LAST_WIN')}</div>
             <div className="text-2xl font-bold text-success-500">
-              +{formatCurrency(betting.lastProfit)}
+              {t('NOTIFICATIONS.PROFIT', { amount: formatCurrency(betting.lastProfit) })}
             </div>
           </div>
         </div>

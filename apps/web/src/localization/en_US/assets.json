@@ -1,0 +1,28 @@
+{
+  "SOUNDS": {
+    "BET_PLACED": "/assets/en_US/sounds/bet_placed.mp3",
+    "CASHOUT": "/assets/en_US/sounds/cashout.mp3",
+    "CRASH": "/assets/en_US/sounds/crash.mp3",
+    "COUNTDOWN": "/assets/en_US/sounds/countdown.mp3",
+    "FLYING": "/assets/en_US/sounds/flying.mp3",
+    "WIN": "/assets/en_US/sounds/win.mp3",
+    "LOSE": "/assets/en_US/sounds/lose.mp3",
+    "BACKGROUND_MUSIC": "/assets/en_US/sounds/background.mp3"
+  },
+  "IMAGES": {
+    "BACKGROUND": "/assets/en_US/images/background.png",
+    "LOGO": "/assets/en_US/images/logo.png",
+    "ROCKET": "/assets/en_US/images/rocket.png",
+    "EXPLOSION": "/assets/en_US/images/explosion.png",
+    "COIN": "/assets/en_US/images/coin.png"
+  },
+  "FONTS": {
+    "PRIMARY": "/assets/en_US/fonts/primary.woff2",
+    "SECONDARY": "/assets/en_US/fonts/secondary.woff2"
+  },
+  "ANIMATIONS": {
+    "ROCKET_FLYING": "/assets/en_US/animations/rocket_flying.json",
+    "EXPLOSION": "/assets/en_US/animations/explosion.json",
+    "PARTICLES": "/assets/en_US/animations/particles.json"
+  }
+}

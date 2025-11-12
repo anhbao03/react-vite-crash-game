@@ -1,6 +1,7 @@
 import { forwardRef } from 'react';
 import { formatMultiplier } from '@crash-game/utils';
 import type { GameStatus } from '@crash-game/utils';
+import { t } from '@/localization/localizationManager';
 
 interface GameState {
   status: GameStatus;
@@ -33,17 +34,19 @@ export const GameCanvas = forwardRef<HTMLDivElement, GameCanvasProps>(
     const getStatusText = () => {
       switch (gameState.status) {
         case 'waiting':
-          return 'Waiting for round...';
+          return t('GAME.STATUS.WAITING');
         case 'betting':
-          return 'Place your bets!';
+          return t('GAME.STATUS.BETTING');
         case 'starting':
-          return 'Starting...';
+          return t('GAME.STATUS.STARTING');
         case 'flying':
-          return 'FLYING!';
+          return t('GAME.STATUS.FLYING');
         case 'crashed':
-          return `CRASHED at ${formatMultiplier(gameState.crashPoint || 0)}`;
+          return t('GAME.STATUS.CRASHED', { 
+            crashPoint: formatMultiplier(gameState.crashPoint || 0) 
+          });
         default:
-          return 'Connecting...';
+          return t('CONNECTION.CONNECTING');
       }
     };
 
@@ -60,7 +63,7 @@ export const GameCanvas = forwardRef<HTMLDivElement, GameCanvasProps>(
           <div className="absolute inset-0 flex items-center justify-center bg-dark-900/80 z-10">
             <div className="text-center">
               <div className="animate-spin w-12 h-12 border-4 border-primary-500 border-t-transparent rounded-full mx-auto mb-4" />
-              <p className="text-lg text-dark-300">Connecting to game server...</p>
+              <p className="text-lg text-dark-300">{t('CONNECTION.CONNECTING')}</p>
             </div>
           </div>
         )}

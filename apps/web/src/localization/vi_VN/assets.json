@@ -1,0 +1,28 @@
+{
+  "SOUNDS": {
+    "BET_PLACED": "/assets/vi_VN/sounds/bet_placed.mp3",
+    "CASHOUT": "/assets/vi_VN/sounds/cashout.mp3",
+    "CRASH": "/assets/vi_VN/sounds/crash.mp3",
+    "COUNTDOWN": "/assets/vi_VN/sounds/countdown.mp3",
+    "FLYING": "/assets/vi_VN/sounds/flying.mp3",
+    "WIN": "/assets/vi_VN/sounds/win.mp3",
+    "LOSE": "/assets/vi_VN/sounds/lose.mp3",
+    "BACKGROUND_MUSIC": "/assets/vi_VN/sounds/background.mp3"
+  },
+  "IMAGES": {
+    "BACKGROUND": "/assets/vi_VN/images/background.png",
+    "LOGO": "/assets/vi_VN/images/logo.png",
+    "ROCKET": "/assets/vi_VN/images/rocket.png",
+    "EXPLOSION": "/assets/vi_VN/images/explosion.png",
+    "COIN": "/assets/vi_VN/images/coin.png"
+  },
+  "FONTS": {
+    "PRIMARY": "/assets/vi_VN/fonts/primary.woff2",
+    "SECONDARY": "/assets/vi_VN/fonts/secondary.woff2"
+  },
+  "ANIMATIONS": {
+    "ROCKET_FLYING": "/assets/vi_VN/animations/rocket_flying.json",
+    "EXPLOSION": "/assets/vi_VN/animations/explosion.json",
+    "PARTICLES": "/assets/vi_VN/animations/particles.json"
+  }
+}

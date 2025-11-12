@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { formatMultiplier } from '@crash-game/utils';
 import type { HistoryRound } from '@crash-game/websocket-client';
+import { t } from '@/localization/localizationManager';
 
 export function History() {
   const [history, setHistory] = useState<HistoryRound[]>([]);
@@ -31,8 +32,10 @@ export function History() {
   return (
     <div className="card">
       <div className="flex items-center justify-between mb-3">
-        <h2 className="text-lg font-bold text-white">Round History</h2>
-        <span className="text-sm text-dark-400">Last {history.length} rounds</span>
+        <h2 className="text-lg font-bold text-white">{t('HISTORY.TITLE')}</h2>
+        <span className="text-sm text-dark-400">
+          {t('HISTORY.LAST_ROUNDS', { count: history.length })}
+        </span>
       </div>
 
       <div className="flex gap-2 overflow-x-auto scrollbar-thin pb-2">
@@ -40,7 +43,10 @@ export function History() {
           <div
             key={round.roundId}
             className="flex-shrink-0 group cursor-pointer"
-            title={`Round #${round.roundNumber}: ${formatMultiplier(round.crashPoint)}`}
+            title={t('HISTORY.ROUND_INFO', { 
+              number: round.roundNumber, 
+              crashPoint: formatMultiplier(round.crashPoint) 
+            })}
           >
             <div
               className={`
@@ -61,8 +67,12 @@ export function History() {
                             opacity-0 group-hover:opacity-100 transition-opacity
                             bg-dark-800 text-white text-xs rounded-lg px-3 py-2 whitespace-nowrap
                             pointer-events-none z-10">
-                <div className="font-semibold">Round #{round.roundNumber}</div>
-                <div className="text-dark-300">{round.totalBets} players</div>
+                <div className="font-semibold">
+                  {t('GAME.ROUND.NUMBER', { number: round.roundNumber })}
+                </div>
+                <div className="text-dark-300">
+                  {t('HISTORY.PLAYERS_COUNT', { count: round.totalBets })}
+                </div>
                 <div className="absolute top-full left-1/2 transform -translate-x-1/2 
                               border-4 border-transparent border-t-dark-800" />
               </div>
