@@ -214,7 +214,7 @@ fuser -k 3000/tcp
 1. Check backend is running
 2. Verify `VITE_WS_URL` in `.env`
 3. Check browser console for errors
-4. Try: `curl http://localhost:3000` (should respond)
+4. Try: `curl http://localhost:4000` (should respond)
 
 ### PM2 Not Starting
 ```bash

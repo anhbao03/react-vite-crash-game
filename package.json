@@ -18,7 +18,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "typecheck": "turbo run typecheck",
     "clean": "turbo run clean && rm -rf node_modules",
-    "clean:port": "fuser -k 3000/tcp 2>/dev/null || true"
+    "clean:port": "fuser -k 4000/tcp 2>/dev/null || true"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",

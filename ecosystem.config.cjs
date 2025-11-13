@@ -7,7 +7,7 @@ module.exports = {
       args: 'run dev',
       env: {
         NODE_ENV: 'development',
-        PORT: 3000,
+        PORT: 4000,
       },
       watch: false,
       instances: 1,
